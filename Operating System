@@ -1,0 +1,10 @@
+🔗 Official Ubuntu 20.04 LTS ARM64 Raspberry Pi Image
+👉 Preinstalled Ubuntu 20.04.5 LTS Server (ARM64) for Raspberry Pi
+📥 wget or browser থেকে direct download:
+https://cdimage.ubuntu.com/releases/focal/release/ubuntu-20.04.5-preinstalled-server-arm64+raspi.img.xz
+
+
+📌 First boot default credentials:
+Username: ubuntu
+Password: ubuntu
+
