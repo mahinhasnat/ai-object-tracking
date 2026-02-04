@@ -1,5 +1,3 @@
-
-
 Things Needed for Autonomous Drone Project
 
 Hardware:
@@ -12,7 +10,7 @@ Camera (USB camera or Raspberry Pi Camera Module)
 USB cable or UART cable to connect Pixhawk and Raspberry Pi
 External 5V BEC (clean power supply for Raspberry Pi)
 
-----
+🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸
 
 Software / Libraries:
 
@@ -30,6 +28,6 @@ Ground station software: QGroundControl or Mission Planner
 
 
 
----
+🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹
 
 ✅ This list covers all essential hardware and software required. 
