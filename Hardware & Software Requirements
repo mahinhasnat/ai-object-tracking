@@ -1,0 +1,35 @@
+
+
+Things Needed for Autonomous Drone Project
+
+Hardware:
+
+Raspberry Pi 4 (8GB RAM)
+64GB high-speed microSD card
+Cooling fan and heatsink for Raspberry Pi
+Camera (USB camera or Raspberry Pi Camera Module)
+(Strongly recommended) Intel RealSense D435/D455 for depth sensing
+USB cable or UART cable to connect Pixhawk and Raspberry Pi
+External 5V BEC (clean power supply for Raspberry Pi)
+
+----
+
+Software / Libraries:
+
+Ubuntu 20.04 LTS (ARM64 for Raspberry Pi)
+Python 3.8 or higher
+OpenCV
+YOLOv5 or YOLOv8 (lightweight model)
+NumPy
+Object tracking algorithm (CSRT / Centroid / SORT)
+PID controller code for flight control
+MAVLink protocol support
+pymavlink
+(Optional but recommended) ROS and MAVROS
+Ground station software: QGroundControl or Mission Planner
+
+
+
+---
+
+✅ This list covers all essential hardware and software required. 
