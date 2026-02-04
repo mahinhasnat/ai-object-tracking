@@ -1,0 +1,56 @@
+🔹follow_person_main.py
+
+কাজ:
+
+এটা হলো মূল program।
+Drone এর state machine নিয়ন্ত্রণ করে: takeoff → search → track → land।
+Camera থেকে frame capture করে person detect করে।
+control.py এবং lidar.py থেকে data নিয়ে PID/P control ব্যবহার করে drone কে move করায়।
+Object tracking + yaw/forward control + Lidar distance adjust সব এখানেই ঘটে।
+Debug / visualization / video recording ও এই file-এ handle হয়।
+
+মোটকথা: এটা সবকিছুর brain, যেখানে modules একত্রে কাজ করে।
+
+
+---
+
+🔸 control.py
+
+কাজ:
+
+Pixhawk flight controller এর সাথে serial / USB connection handle করে।
+Drone কে arm, takeoff, land, stop command পাঠায়।
+PID / P controller implement করে, যাতে drone smoothভাবে target follow করতে পারে।
+Yaw, forward velocity, altitude adjust করার command generate করে।
+Flight mode set করা এবং RC override / failsafe logic manage করে।
+
+মোটকথা: এটা হলো drone এর motor / Pixhawk control layer।
+
+
+---
+
+🔸lidar.py
+
+কাজ:
+
+Lidar বা Intel RealSense distance sensor থেকে distance measurement নেয়।
+Drone কত দূরত্বে আছে target থেকে, সেটার info calculate করে।
+Forward velocity PID adjust করার জন্য এই distance ব্যবহার হয়।
+Lidar-ভিত্তিক safety (যদি sensor blocked বা value invalid হয়) handle করে।
+
+মোটকথা: এটা হলো distance sensing module, drone কে target থেকে সঠিক দূরত্বে রাখে।
+
+
+---
+
+🔸detector_mobilenet.py
+
+কাজ:
+
+Camera বা video stream থেকে person/object detect করে।
+Bounding box, center point, confidence score generate করে।
+follow_person_main.py-কে detect করা target এর location দেয়।
+YOLO / MobileNet / pre-trained model ব্যবহার করে real-time detection করে।
+
+মোটকথা: এটা হলো eye of the drone, যা বলে কে বা কী লক্ষ্য করা হচ্ছে।
+
